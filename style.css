@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Josefin+Sans:ital,wght@1,300&family=Signika+Negative&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+body{
+    background: #2563EB;
+}
+
+.navegador {
+    padding-right: 30px;
+    background-image: url("./imagenes/sky_footer.jpg");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen {
+    width: 150px;
+}
+
+.cabeza .opciones {
+    list-style: none;
+}
+
+.cabeza .menu li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: all ease .5;
+}
+
+.cabeza .menu li:hover {
+    transform: scale(1.1);
+}
+
+.cabeza .menu a {
+    font-size: 18px;
+    color: rgb(236, 236, 236);
+    text-decoration: none;
+}
+
+.opciones li {
+    list-style: none;
+    font-size: 20px;
+    font: white;
+}
+
+/* INICIO BODY */
+
+.inicio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+}
+
+.img_grid img {
+    /* width: 30rem; */
+    height: 30rem;
+    /* margin-right: 0; */
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* CSS BUSCADOR */
+
+.container-input {
+    position: relative;
+}
+
+.buscador_{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+
+/* CSS PROYECTOS */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    max-width: 300px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.image_calc {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-image: url(./imagenes/proyecto_calc.png);
+}
+
+.image_js{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-image: url(./imagenes/proyecto_js.png);
+}
+
+.image_game{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-image: url(./imagenes/proyecto_ppt.png);
+}
+
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2563EB;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
+
+/* BOTONES REDES SOCIALES */
+
+.rd_rd a {
+    text-decoration: none;
+}
+
+.buttons_rd {
+    background: white;
+    /* position: relative; */
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #571aff;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: #571aff;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+.buttons_rd span {
+    margin: 10px;
+}
+
+.buttons_rd::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.buttons_rd:hover {
+    color: #fff;
+    border: 1px solid #571aff;
+    background-color: #571aff;
+
+}
+
+.buttons_rd i:hover {
+    color: #571aff;
+}
+
+.buttons_rd:hover::before {
+    box-shadow: inset 0 0 0 10em #571aff;
+}
+
+.buttons_rd i:hover::before {
+    color: #fff;
+}
+
+/* BOTON PARA SUSCRIBIRSE */
+
+.subs_cribe {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: #b97404;
+    background: #ad5389;
+    background: linear-gradient(to right, #ffdb29, #fcff68, #ffdb29);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
+
+.subs_cribe svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.subs_cribe span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.subs_cribe:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+.subs_cribe:hover span {
+    transform: translateX(7px);
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.pie {
+    text-align: center;
+    padding: 30px;
+    background-image: url("./imagenes/sky_footer.jpg");
+}
+
+.rd_rd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rd_rd {
+    margin: 50px;
+}
+
+.notecopies{
+    color: whitesmoke;
+    font-size: 30px;
+}
